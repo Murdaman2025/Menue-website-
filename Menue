@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .menu-container {
+            background-color: white;
+            padding: 30px;
+            border: 5px solid gold;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu" class="menu-container">
+        <!-- Menu will be displayed here by JavaScript -->
+    </div>
+
+    <script>
+        // This function will add the menu content to the webview
+        function displayMenu() {
+            const menuContent = `
+                🍽️ MENU
+
+                Beverages:
+                - Brazilian Lemonade
+
+                Meals:
+                - Chicken Lollipops
+
+                Snacks:
+                - Angel Cake Cupcake
+                - Deep Fried Milky Way
+            `;
+
+            // Adding a gold border effect using text characters to simulate the gold trim
+            const goldTrim = "★".repeat(30);  // Simulating gold trim with stars
+
+            const fullMenu = `
+            ${goldTrim}
+            ${menuContent}
+            ${goldTrim}
+            `;
+
+            // Insert the menu into the div
+            document.getElementById("menu").innerText = fullMenu;
+        }
+
+        // Call the function to display the menu when the page is loaded
+        window.onload = displayMenu;
+    </script>
+
+</body>
+</html>
